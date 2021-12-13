@@ -2,8 +2,8 @@ package fr.diginamic.banque.entites;
 
 public class Compte {
 	
-	private int numeroCompte;
-	private long soldeCompte;
+	protected int numeroCompte;
+	protected long soldeCompte;
 	
 	
 
@@ -20,11 +20,12 @@ public class Compte {
 		 
 	 }
 	
-		public String toString() {
+	public String toString() {
 		
-			return "le numéro de compte est : " +  numeroCompte + " et le solde du compte est de : "  + soldeCompte;
+		return "le numéro de compte est : " +  numeroCompte + " et le solde du compte est de : "  + soldeCompte;
 		
-		}
+	}
+	
 
 
 }
