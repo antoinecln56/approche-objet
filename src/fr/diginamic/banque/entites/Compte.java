@@ -20,9 +20,6 @@ public class Compte {
 		 
 	 }
 	
-	public long getSolde() {
-		
-		return soldeCompte;
-	}
+
 
 }
