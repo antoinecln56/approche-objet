@@ -6,7 +6,7 @@ public class Compte {
 	private long soldeCompte;
 	
 	
-	
+
 	
 	public Compte(){
 		
@@ -20,6 +20,11 @@ public class Compte {
 		 
 	 }
 	
+		public String toString() {
+		
+			return "le numéro de compte est : " +  numeroCompte + " et le solde du compte est de : "  + soldeCompte;
+		
+		}
 
 
 }
