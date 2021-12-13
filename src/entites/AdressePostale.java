@@ -15,10 +15,10 @@ public class AdressePostale {
 	 
 	 
 	public AdressePostale(int numRue, String libRue, int code, String nville){
-		numeroDeRue = numRue;
-		libelleRue = libRue;
-		codePostale = code;
-		ville = nville;
+		this.numeroDeRue = numRue;
+		this.libelleRue = libRue;
+		this.codePostale = code;
+		this.ville = nville;
 	}
 	
 	
