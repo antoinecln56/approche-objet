@@ -19,18 +19,19 @@ public class TestListeInt {
 		liste.add(8);
 		liste.add(5);
 		
-		// Afficher la liste et sa taille 
+		// Afficher la liste et sa taille : REFAIRE AVEC BOUCLE
+		
 		
 		System.out.println(liste);
 		System.out.println(liste.size());
 		
 		
-		// Afficher l'entier le plus grand 
+		// Afficher l'entier le plus grand REFAIRE AVEC BOUCLE
 		
 		int maxi = Collections.max(liste);
 	    System.out.println(maxi);
 		
-		// Supprimer entier le plus petit de la liste
+		// Supprimer entier le plus petit de la liste : REFAIRE AVEC BOUCLE
 		
 		liste.remove(4);
 		System.out.println(liste);
