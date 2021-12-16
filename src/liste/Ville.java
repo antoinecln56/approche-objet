@@ -8,8 +8,8 @@ import java.util.List;
 
 public class Ville {
 	
-	String nom;
-	int nbHabitants;
+	public String nom;
+	public int nbHabitants;
 	
 	public Ville(String nom, int nbHabitants) {
 		
@@ -17,6 +17,8 @@ public class Ville {
 		this.nbHabitants = nbHabitants;
 		
 	}
+	
+
 	
 	public String toString() {
 		
@@ -29,14 +31,14 @@ public class Ville {
 		// ArrayList de villes contenant des villes et le nombre d'habitants
 		
 		List<Ville> villes = new ArrayList<>();
-		villes.add(new Ville("Nice", 343000));
-		villes.add(new Ville("Carcassonne", 47800));
-		villes.add(new Ville("Narbonne", 53400));
-		villes.add(new Ville("Lyon", 484000));
+		villes.add(new Ville("Nice", 343_000));
+		villes.add(new Ville("Carcassonne", 47_800));
+		villes.add(new Ville("Narbonne", 53_400));
+		villes.add(new Ville("Lyon", 484_000));
 		villes.add(new Ville("Foix", 9700));
-		villes.add(new Ville("Pau", 77200));
-		villes.add(new Ville("Marseille", 850700));
-		villes.add(new Ville("Tarbes", 40600));
+		villes.add(new Ville("Pau", 77_200));
+		villes.add(new Ville("Marseille", 850_700));
+		villes.add(new Ville("Tarbes", 40_600));
 		
 		
 		// Recupérer la ville avec le plus d'habitants et l'afficher
