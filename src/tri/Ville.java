@@ -1,4 +1,4 @@
-package liste;
+package tri;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -18,11 +18,20 @@ public class Ville implements Comparable<Ville> {
 		
 	}
 	
+	
 	public int compareTo(Ville tri) {
 		
-		return this.nom.compareTo(tri.nom);
+		//return this.nom.compareTo(tri.nom);
+		if(this.nbHabitants > tri.nbHabitants) {
+			return 1;
+		}
+		if(this.nbHabitants < tri.nbHabitants) {
+			return -1;
+		}
+		return 0;
 		
 	}
+	
 	
 	public String toString() {
 		
@@ -46,52 +55,35 @@ public class Ville implements Comparable<Ville> {
 		villes.add(new Ville("Marseille", 850_700));
 		villes.add(new Ville("Tarbes", 40_600));
 		
+		/*
+		Collections.sort(villes);
 		
-		// Recupérer la ville avec le plus d'habitants et l'afficher
-		
-		Ville maxHabitants = villes.get(0); // Prend la liste et commence à l'index 0
-		Ville minHabitants = villes.get(0);
-		
-		for(Ville villeP: villes) {
+		for(Ville villeP : villes) {
 			
-			if(villeP.nbHabitants > maxHabitants.nbHabitants) {
-				
-				maxHabitants = villeP;
-				
-			}
-			
+			System.out.println(villeP);
 		}
-		System.out.println(maxHabitants.nom);
+		*/
 		
+		ComparatorHabitant triHabitants = new ComparatorHabitant();
+		Collections.sort(villes, triHabitants);
 		
-		// Recupérer la ville avec le moins d'habitants et la supprimer
-		
-		for(Ville villeP: villes) {
+		for(Ville villeP : villes) {
 			
-			if(villeP.nbHabitants < minHabitants.nbHabitants) {
-				
-				minHabitants = villeP;
-				
-			}
-			
+			System.out.println(villeP);
 		}
-		System.out.println(minHabitants.nom);
-		villes.remove(minHabitants);
-		System.out.println(villes);
 		
-		// Recuperer les villes de + de 100 000 habitants et les afficher en majuscule
 		
-		for(Ville villeP: villes) {
+		System.out.println("\n");
+		
+		
+		
+		ComparatorNom triNom = new ComparatorNom();
+		Collections.sort(villes, triNom);
+		
+		for(Ville villeP : villes) {
 			
-			if(villeP.nbHabitants > 100000) {
-				
-				villeP.nom = villeP.nom.toUpperCase();
-				
-			}
-			
+			System.out.println(villeP);
 		}
-		System.out.println(villes);
-		
 		
 		
 	}
